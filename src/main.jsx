@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Root, { loader as rootLoader } from "./root";
 import ErrorPage from "./error-page";
+import Counter from "./counter";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
@@ -13,6 +14,12 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
+    children: [
+      {
+        path: "/counter",
+        element: <Counter />,
+      },
+    ],
   },
 ]);
 
