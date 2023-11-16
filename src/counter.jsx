@@ -1,8 +1,8 @@
 import {
-  increment,
+  // increment,
   decrement,
-  incrementByAmount,
   incrementAsync,
+  multiplyByTwo,
 } from "../store/counter/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -16,6 +16,7 @@ const Counter = () => {
       <div>
         <button onClick={() => dispatch(incrementAsync(10))}>Increment</button>
         <button onClick={() => dispatch(decrement())}>Decrement</button>
+        <button onClick={() => dispatch(multiplyByTwo())}>x2</button>
       </div>
     </div>
   );
