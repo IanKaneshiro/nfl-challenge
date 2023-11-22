@@ -22,9 +22,6 @@ export default function Root() {
             <li>
               <Link to={`contacts/1`}> {nflScores[0].game}</Link>
             </li>
-            <li>
-              <Link to={`contacts/2`}>Your Friend</Link>
-            </li>
           </ul>
         </nav>
       </div>
